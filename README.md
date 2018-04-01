@@ -17,3 +17,65 @@ At first will build a generic model where the output is the steering angle based
 
 This is a simple linear regression model, which outputs the expected measurement for the given image or location on the map.
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+It performs very badly as seen in the video. The car veers everywhere
+
+## MODEL 2
+
+In this we are going to normalize the input image. In this model, a lambda layer is a convenient way to parallelize image normalization. The lambda layer will also ensure that the model will normalize input images when making predictions in drive.py.
+
+That lambda layer could take each pixel in an image and run it through the formulas:
+```
+pixel_normalized = pixel / 255
+
+pixel_mean_centered = pixel_normalized - 0.5
+```
+A lambda layer will look something like:
+```
+Lambda(lambda x: (x / 255.0) - 0.5)
+```
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+Well it is still no where close to autonomous driving. Time to try the famous LeNet and see how it performs.
+
+## MODEL 3
+
+In this model we will build a CNN for the images we got. This model follows LeNet architecture.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+Seems better but again it still fails to stay on the road, long way to go to get it perfected.
+
+## MODEL 4
+
+We going to augment our images by flipping images and steering measurements. A effective technique involves flipping images and taking the opposite sign of the steering measurement. 
+
+Flipped Images
+
+[image] gtx1080Ti
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+Seems to drive, but get stuck by the time it reaches the bridge.
+
+## MODEL 5
+
+We will now try and utilize the left and right view image along with the center image we have been using so far. It is  possible to use all three camera images to train the model. When recording, the simulator will simultaneously save an image for the left, center and right cameras. Each row of the csv log file, driving_log.csv, contains the file path for each camera as well as information about the steering measurement, throttle, brake and speed of the vehicle. We will now augment our trainign data to contiant these images.
+
+We will feed the left and right camera images to your model as if they were coming from the center camera. This way, we can teach your model how to steer if the car drifts off to the left or the right. Figuring out how much to add or subtract from the center angle will involve some experimentation.
+
+During prediction (i.e. "autonomous mode"), we only predict with the center camera image.
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+
+## MODEL 6
+
+We will now crop the image and build a area of interest. The modle reads the noise in the image affectign the final accurancy for pour autonomous driving.
+
+Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
+
+[image]
+
+On the first trained model with 5 epochs the car was able to cross over the bridge, but failed to contineu forward and went into the lake. The model needs some more tweeking.
