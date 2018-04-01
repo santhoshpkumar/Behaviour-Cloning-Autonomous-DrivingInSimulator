@@ -79,3 +79,10 @@ Here is an example of an input image and its cropped version after passing throu
 [image]
 
 On the first trained model with 5 epochs the car was able to cross over the bridge, but failed to contineu forward and went into the lake. The model needs some more tweeking.
+
+On retraining with a better data set, that included lot of images where the steer angle would bring it back to center of the road. With this change was able to drive around the circuit without going off the road.
+
+## MODEL 7
+
+With the armed insight that a better data with equal negative and positive will help produce a better model, I first focused on getting a new data set with images from the second track. 
+Also went ahead and used the nvida model and some slight modification of adding a dropoff resulted in a model which now can steer the car even when it veers off road. I am quite satisfied with the modle and a great learning on the effect of the right quality of data to build a model.
