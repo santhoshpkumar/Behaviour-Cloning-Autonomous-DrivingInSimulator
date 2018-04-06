@@ -102,7 +102,9 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 
 #### 3. Creation of the Training Set & Training Process
 
-https://drive.google.com/open?id=1MlVImnsCtx-FI82rfXBwv6mLrP7Tdodg
+Data set: https://drive.google.com/open?id=1MlVImnsCtx-FI82rfXBwv6mLrP7Tdodg
+
+One great learning from this project was that, quality of the data is utmost important as compared to that of model importance. I spend time tweeking and experimenting multiple model with the default provided dataset, I even created 10 laps of properly driven behavior images. What finally hit me was tht the model will never perform well if it does nto have the data set of bad behvior, that is the most critical to get the car back on the road. Track 2 helps to generalize the data but the images still does not provide enough training for the model to drive with in the track limits.
 
 To capture good driving behavior, I recorded one laps on track one using center lane driving. The video link has 3 laps. The last lap was done driving in the center of the track
 
@@ -115,7 +117,7 @@ Then I added more recording of driving on one side of the track two in order to 
 
 https://youtu.be/LRuZ5QlC0tk
 
-To augment the data sat, I also flipped each of the images and angles thinking that this would add more training images. I have set the measurment to 30 so that it manevour off to the center of the road if the image matches that of the left or the right image.
+To augment the data sat, I also flipped each of the images and angles thinking that this would add more training images. I have set the measurment correction to +/- 0.30 so that it manevour off to the center of the road if the image matches that of the left or the right image.
 
 After the collection process, I had X number of data points. I then preprocessed this data by ...
 
