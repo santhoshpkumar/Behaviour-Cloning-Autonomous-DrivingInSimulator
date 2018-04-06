@@ -20,7 +20,8 @@ At first will build a generic model where the output is the steering angle based
 
 This is a simple linear regression model, which outputs the expected measurement for the given image or location on the map.
 
-![alt text][image1](https://youtu.be/E5XF0RpSkrI)
+![alt text][image1]
+(https://youtu.be/E5XF0RpSkrI)
 
 It performs very badly as seen in the video. The car veers everywhere
 
@@ -39,7 +40,8 @@ A lambda layer will look something like:
 Lambda(lambda x: (x / 255.0) - 0.5)
 ```
 
-[![IMAGE ALT TEXT HERE](image1)](https://youtu.be/PHPITs18BjM)
+![alt text][image1]
+(https://youtu.be/PHPITs18BjM)
 
 Well it is still no where close to autonomous driving. Time to try the famous LeNet and see how it performs.
 
@@ -47,7 +49,8 @@ Well it is still no where close to autonomous driving. Time to try the famous Le
 
 In this model we will build a CNN for the images we got. This model follows LeNet architecture.
 
-[![IMAGE ALT TEXT HERE](image1)](https://youtu.be/Zi3V4CIJxEo)
+![alt text][image1]
+(https://youtu.be/Zi3V4CIJxEo)
 
 Seems better but again it still fails to stay on the road, long way to go to get it perfected.
 
@@ -57,9 +60,8 @@ We going to augment our images by flipping images and steering measurements. A e
 
 Flipped Images
 
-[image] gtx1080Ti
-
-[![IMAGE ALT TEXT HERE](image1)](https://youtu.be/cW4aDtf9W-g)
+![alt text][image1]
+(https://youtu.be/cW4aDtf9W-g)
 
 Seems to drive, but get stuck by the time it reaches the bridge.
 
@@ -71,7 +73,8 @@ We will feed the left and right camera images to your model as if they were comi
 
 During prediction (i.e. "autonomous mode"), we only predict with the center camera image.
 
-[![IMAGE ALT TEXT HERE](image1)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+![alt text][image1]
+(https://youtu.be/YuEtP6lbjP0)
 
 ## MODEL 6
 
