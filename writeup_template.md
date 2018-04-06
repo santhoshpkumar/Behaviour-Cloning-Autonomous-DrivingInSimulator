@@ -113,4 +113,4 @@ To augment the data sat, I also flipped each of the images and angles thinking t
 
 I finally randomly shuffled the data set. I used this training data for training the model. The validation set helped determine if the model was over or under fitting. I used an adam optimizer so that manually training the learning rate wasn't necessary.  The ideal number of epochs was 10. However I noticed that the model at the final epoc has much higher validatoin loss as compared to the model before it, so added steps to save the model at each epoch and pick the one that had lowest validation loss in last coupel of epochs. 
 
-Final Video Link: https://youtu.be/_tywEv0Vhno
+### Final Video Link: https://youtu.be/_tywEv0Vhno
