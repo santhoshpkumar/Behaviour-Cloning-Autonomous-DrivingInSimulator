@@ -85,16 +85,13 @@ Click Here for video -- >(https://youtu.be/YuEtP6lbjP0)
 
 We will now crop the image and build a area of interest. The modle reads the noise in the image affectign the final accurancy for pour autonomous driving.
 
-Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
+On the first trained model with 5 epochs the car was able to cross over the bridge, but failed to contineu forward and went into the lake. The model needs some more tweeking.
 
+On retraining with a better data set, that included lot of images where the steer angle would bring it back to center of the road. With this change was able to drive around the circuit without going off the road.
 
 ![alt text][image1]
 
 Click Here for video -- >(https://youtu.be/YuEtP6lbjP0)
-
-On the first trained model with 5 epochs the car was able to cross over the bridge, but failed to contineu forward and went into the lake. The model needs some more tweeking.
-
-On retraining with a better data set, that included lot of images where the steer angle would bring it back to center of the road. With this change was able to drive around the circuit without going off the road.
 
 ## MODEL 7
 
@@ -103,6 +100,6 @@ Also went ahead and used the nvida model and some slight modification of adding 
 
 ![alt text][image1]
 
-Click Here for run1 -- >(https://youtu.be/YuEtP6lbjP0)
+Click Here for run1 -- >(https://youtu.be/alTj2xaDM7Y)
 
-Click Here for run2 -- >(https://youtu.be/YuEtP6lbjP0)
+Click Here for run2 -- >(https://youtu.be/KJWZdH0xHjs)
