@@ -102,8 +102,7 @@ Here is a visualization of the architecture (note: visualizing the architecture 
 
 #### 3. Creation of the Training Set & Training Process
 
-
-
+https://drive.google.com/open?id=1MlVImnsCtx-FI82rfXBwv6mLrP7Tdodg
 
 To capture good driving behavior, I recorded one laps on track one using center lane driving. The video link has 3 laps. The last lap was done driving in the center of the track
 
