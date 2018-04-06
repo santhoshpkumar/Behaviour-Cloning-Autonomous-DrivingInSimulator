@@ -21,7 +21,8 @@ At first will build a generic model where the output is the steering angle based
 This is a simple linear regression model, which outputs the expected measurement for the given image or location on the map.
 
 ![alt text][image1]
-(https://youtu.be/E5XF0RpSkrI)
+
+Click Here for video -- >(https://youtu.be/E5XF0RpSkrI)
 
 It performs very badly as seen in the video. The car veers everywhere
 
@@ -41,7 +42,8 @@ Lambda(lambda x: (x / 255.0) - 0.5)
 ```
 
 ![alt text][image1]
-(https://youtu.be/PHPITs18BjM)
+
+Click Here for video -- >(https://youtu.be/PHPITs18BjM)
 
 Well it is still no where close to autonomous driving. Time to try the famous LeNet and see how it performs.
 
@@ -50,7 +52,8 @@ Well it is still no where close to autonomous driving. Time to try the famous Le
 In this model we will build a CNN for the images we got. This model follows LeNet architecture.
 
 ![alt text][image1]
-(https://youtu.be/Zi3V4CIJxEo)
+
+Click Here for video -- >(https://youtu.be/Zi3V4CIJxEo)
 
 Seems better but again it still fails to stay on the road, long way to go to get it perfected.
 
@@ -61,7 +64,8 @@ We going to augment our images by flipping images and steering measurements. A e
 Flipped Images
 
 ![alt text][image1]
-(https://youtu.be/cW4aDtf9W-g)
+
+Click Here for video -- >(https://youtu.be/cW4aDtf9W-g)
 
 Seems to drive, but get stuck by the time it reaches the bridge.
 
@@ -74,7 +78,8 @@ We will feed the left and right camera images to your model as if they were comi
 During prediction (i.e. "autonomous mode"), we only predict with the center camera image.
 
 ![alt text][image1]
-(https://youtu.be/YuEtP6lbjP0)
+
+Click Here for video -- >(https://youtu.be/YuEtP6lbjP0)
 
 ## MODEL 6
 
@@ -82,7 +87,10 @@ We will now crop the image and build a area of interest. The modle reads the noi
 
 Here is an example of an input image and its cropped version after passing through a Cropping2D layer:
 
-[image]
+
+![alt text][image1]
+
+Click Here for video -- >(https://youtu.be/YuEtP6lbjP0)
 
 On the first trained model with 5 epochs the car was able to cross over the bridge, but failed to contineu forward and went into the lake. The model needs some more tweeking.
 
@@ -92,3 +100,9 @@ On retraining with a better data set, that included lot of images where the stee
 
 With the armed insight that a better data with equal negative and positive will help produce a better model, I first focused on getting a new data set with images from the second track. 
 Also went ahead and used the nvida model and some slight modification of adding a dropoff resulted in a model which now can steer the car even when it veers off road. I am quite satisfied with the modle and a great learning on the effect of the right quality of data to build a model.
+
+![alt text][image1]
+
+Click Here for run1 -- >(https://youtu.be/YuEtP6lbjP0)
+
+Click Here for run2 -- >(https://youtu.be/YuEtP6lbjP0)
