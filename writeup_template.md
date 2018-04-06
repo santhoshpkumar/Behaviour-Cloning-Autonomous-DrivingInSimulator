@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/architecutre.png "Nvidia Architecture"
+[image1]: ./examples/architecture.png "Nvidia Architecture"
 [image2]: ./examples/placeholder.png "Grayscaling"
 
 
