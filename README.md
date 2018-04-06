@@ -20,7 +20,7 @@ At first will build a generic model where the output is the steering angle based
 
 This is a simple linear regression model, which outputs the expected measurement for the given image or location on the map.
 
-[![IMAGE ALT TEXT HERE](image1)](https://youtu.be/E5XF0RpSkrI)
+![alt text][image1](https://youtu.be/E5XF0RpSkrI)
 
 It performs very badly as seen in the video. The car veers everywhere
 
