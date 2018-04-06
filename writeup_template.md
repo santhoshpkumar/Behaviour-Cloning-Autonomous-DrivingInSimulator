@@ -56,17 +56,17 @@ My model is based on Nvidia Network architecure used in their self driving car. 
 
 #### 2. Attempts to reduce overfitting in the model
 
-The model contains dropout layers in order to reduce overfitting (model.py lines 21). 
+The model contains dropout layers in order to reduce overfitting  
 
-The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 10-16). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
+The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
 
 #### 3. Model parameter tuning
 
-The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 25).
+The model used an adam optimizer, so the learning rate was not tuned manually.
 
 #### 4. Appropriate training data
 
-Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road ... 
+Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road and data from second track to generalize. 
 
 For details about how I created the training data, see the next section. 
 
@@ -74,25 +74,21 @@ For details about how I created the training data, see the next section.
 
 #### 1. Solution Design Approach
 
-The overall strategy for deriving a model architecture was to ...
+The overall strategy for deriving a model architecture was to try the approach presented in the class exercises. Start with basic logistic model, progress to LeNet and finally Nvidia Architecture.
 
-My first step was to use a convolution neural network model similar to the ... I thought this model might be appropriate because ...
+Details of the model can be accessed here: https://github.com/santhoshpkumar/BehaviourCloningAutonomousDrivingInSimulator/blob/master/README.md
 
-In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. 
+The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle veered towards the edge of the track and corrected back to center.
 
-To combat the overfitting, I modified the model so that ...
-
-Then I ... 
-
-The final step was to run the simulator to see how well the car was driving around track one. There were a few spots where the vehicle fell off the track... to improve the driving behavior in these cases, I ....
+Model 6 with LeNet worked pretty well without issues around the track and Model 7 was based on the Nvidai architecuture which had same resutls as mode 6, but showed more responsive behavior at increased speed (tweeked the drive.py and set the default to higher value than 9)
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
 #### 2. Final Model Architecture
 
-The final model architecture (model.py lines 18-24) consisted of a convolution neural network with the following layers and layer sizes ...
+The final model architecture consisted of a convolution neural network with the following layers and layer sizes.
 
-Here is a visualization of the architecture (note: visualizing the architecture is optional according to the project rubric)
+Here is a visualization of the architecture.
 
 ![alt text][image1]
 
