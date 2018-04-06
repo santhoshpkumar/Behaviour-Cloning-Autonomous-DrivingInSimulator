@@ -10,11 +10,13 @@ At first I collected the data by driving the car on the center of the road witho
 
 Here is the video obtained by stiching all the images in the training set obtained.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+Track1:
+https://youtu.be/bIOxROYhmh0
+
+Track2:
+https://youtu.be/LRuZ5QlC0tk
 
 At first will build a generic model where the output is the steering angle based on the image. I will not be using AWS instance to build and train the model but instead will train it on my GTX 1080 Ti. Will record the amount of time taken to build and train the model.
-
-[image] gtx1080Ti
 
 ## MODEL 1
 
@@ -91,7 +93,7 @@ On retraining with a better data set, that included lot of images where the stee
 
 ![alt text][image1]
 
-Click Here for video -- >(https://youtu.be/YuEtP6lbjP0)
+Click Here for video -- >(https://youtu.be/3gFvRcn0bko)
 
 ## MODEL 7
 
@@ -103,3 +105,6 @@ Also went ahead and used the nvida model and some slight modification of adding 
 Click Here for run1 -- >(https://youtu.be/alTj2xaDM7Y)
 
 Click Here for run2 -- >(https://youtu.be/KJWZdH0xHjs)
+
+
+All intermediate models fom 1 to 6 can be downloaded here -->> https://drive.google.com/open?id=1idwEgE6L2gjdWh97g0cknD7WOlbrhOHS
