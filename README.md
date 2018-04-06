@@ -17,7 +17,7 @@ At first will build a generic model where the output is the steering angle based
 
 This is a simple linear regression model, which outputs the expected measurement for the given image or location on the map.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://youtu.be/E5XF0RpSkrI/0.jpg)](https://youtu.be/E5XF0RpSkrI)
 
 It performs very badly as seen in the video. The car veers everywhere
 
@@ -36,7 +36,7 @@ A lambda layer will look something like:
 Lambda(lambda x: (x / 255.0) - 0.5)
 ```
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://youtu.be/PHPITs18BjM/0.jpg)](https://youtu.be/PHPITs18BjM)
 
 Well it is still no where close to autonomous driving. Time to try the famous LeNet and see how it performs.
 
@@ -44,7 +44,7 @@ Well it is still no where close to autonomous driving. Time to try the famous Le
 
 In this model we will build a CNN for the images we got. This model follows LeNet architecture.
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://youtu.be/Zi3V4CIJxEo)](https://youtu.be/Zi3V4CIJxEo)
 
 Seems better but again it still fails to stay on the road, long way to go to get it perfected.
 
@@ -56,7 +56,7 @@ Flipped Images
 
 [image] gtx1080Ti
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![IMAGE ALT TEXT HERE](https://youtu.be/cW4aDtf9W-g/0.jpg)](https://youtu.be/cW4aDtf9W-g)
 
 Seems to drive, but get stuck by the time it reaches the bridge.
 
