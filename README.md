@@ -102,9 +102,7 @@ Also went ahead and used the nvida model and some slight modification of adding 
 
 ![alt text][image1]
 
-Click Here for run1 -- >(https://youtu.be/alTj2xaDM7Y)
-
-Click Here for run2 -- >(https://youtu.be/KJWZdH0xHjs)
+Click Here for video -- >(https://youtu.be/_tywEv0Vhno)
 
 
 All intermediate models fom 1 to 6 can be downloaded here -->> https://drive.google.com/open?id=1idwEgE6L2gjdWh97g0cknD7WOlbrhOHS
