@@ -93,3 +93,19 @@ Also went ahead and used the nvida model and some slight modification of adding 
 [![IMAGE_VIDEO](https://img.youtube.com/vi/_tywEv0Vhno/1.jpg)](https://www.youtube.com/watch?v=_tywEv0Vhno)
 
 All intermediate models fom 1 to 6 can be downloaded [here](https://drive.google.com/open?id=1idwEgE6L2gjdWh97g0cknD7WOlbrhOHS)
+
+## MODEL 8
+
+Post review with subject matter experts it was suggested to add a activation function to each of the fully connected layers. I experiments with different activation functions as to sigmoid, tanh, relu, but what gave the most smooth drive on autonomous mode was the elu (exponential linear unit). Model 7 did lot of sharp turns, but with these activation added I could see smoothing of the turns and car sticking to a virtual lane. While I stuck to my initial 10 epoch, I saw that the models post 4 epoch had lower training error but the validation error increased, indicating overfitting. I saved the model at each epoch and have used the 4 epoch saved parameters as my final model.
+
+Autonomous drive around the track with constant speed of 9 MPH
+
+[![IMAGE_VIDEO](https://img.youtube.com/vi/O6aZjh_V-II/1.jpg)](https://www.youtube.com/watch?v=O6aZjh_V-II)
+
+Autonomous drive around the track with constant speed of 15 MPH 
+
+
+[![IMAGE_VIDEO](https://img.youtube.com/vi/Uy9pEDzrLtU/1.jpg)](https://www.youtube.com/watch?v=Uy9pEDzrLtU)
+
+
+[![IMAGE_VIDEO](https://img.youtube.com/vi/hnyZgaBFwic/1.jpg)](https://www.youtube.com/watch?v=hnyZgaBFwic)
