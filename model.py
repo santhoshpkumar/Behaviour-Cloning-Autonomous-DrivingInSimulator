@@ -3,12 +3,13 @@ import cv2
 import numpy as np
 
 from keras.models import Sequential
-from keras.layers import Flatten, Dense, Cropping2D, Lambda, Dropout
+from keras.layers import Flatten, Dense, Cropping2D, Lambda, Dropout, Activation
 from keras.layers.convolutional import Convolution2D
 from keras.layers.pooling import MaxPooling2D
 from keras.layers.advanced_activations import ELU
 from keras.regularizers import l2
 from keras.optimizers import Adam
+from keras.callbacks import ModelCheckpoint
 
 lines = []
 with open('./data/driving_log.csv') as csvfile:
@@ -59,6 +60,7 @@ model.add(Convolution2D(6, 5, 5, activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
 model.add(Dense(128))
+model.add(Activation('tanh'))
 model.add(Dense(64))
 model.add(Dense(1))
 '''
@@ -77,11 +79,20 @@ model.add( Convolution2D( 64, 3, 3, subsample=(1,1), activation = 'relu' ) )
 model.add( Flatten() )
 # Fully connected layers
 model.add( Dense( 100 ) )
-model.add(Dropout(0.5)) # I added this dropout layer myself, because the previous 
-                        # fully connected layers has a lot of free parameters 
-                        # and seems like the layer most in danger of overfitting. 
+model.add(Activation('elu'))
+model.add(Dropout(0.5)) # I added this dropout layer to avoid overfitting. 
+
 model.add( Dense( 50 ) )
+#model.add(Activation('tanh'))
+#model.add(Activation('sigmoid'))
+model.add(Activation('elu'))
+#model.add(Activation('relu'))
 model.add( Dense( 10 ) )
+
+#model.add(Activation('tanh'))
+#model.add(Activation('sigmoid'))
+model.add(Activation('elu'))
+#model.add(Activation('relu'))
 model.add( Dense( 1 ) )
 
 # Compile and train the model, 
@@ -89,6 +100,9 @@ model.add( Dense( 1 ) )
 #model.compile(optimizer=Adam(lr=1e-4), loss='mse')
 model.compile(loss='mse', optimizer='adam')
 
-model.fit(X_train,y_train, validation_split=0.2, nb_epoch=10, shuffle=True, verbose=1)
+checkpoint = ModelCheckpoint('model{epoch:02d}.h5')
+
+model.fit(X_train,y_train, validation_split=0.2, nb_epoch=5, shuffle=True, verbose=1, callbacks=[checkpoint])
+
 print("Complete Model Building")
 model.save('model.h5')
