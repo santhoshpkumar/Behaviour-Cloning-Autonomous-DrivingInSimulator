@@ -16,7 +16,6 @@ Track1:
 
 Track2:
 
-https://youtu.be/LRuZ5QlC0tk
 [![TRACK 2](https://img.youtube.com/vi/LRuZ5QlC0tk/1.jpg)](https://www.youtube.com/watch?v=LRuZ5QlC0tk)
 
 At first will build a generic model where the output is the steering angle based on the image. I will not be using AWS instance to build and train the model but instead will train it on my GTX 1080 Ti. Will record the amount of time taken to build and train the model.
@@ -93,4 +92,4 @@ Also went ahead and used the nvida model and some slight modification of adding 
 
 [![IMAGE_VIDEO](https://img.youtube.com/vi/_tywEv0Vhno/1.jpg)](https://www.youtube.com/watch?v=_tywEv0Vhno)
 
-All intermediate models fom 1 to 6 can be downloaded here -->> https://drive.google.com/open?id=1idwEgE6L2gjdWh97g0cknD7WOlbrhOHS
+All intermediate models fom 1 to 6 can be downloaded [here](https://drive.google.com/open?id=1idwEgE6L2gjdWh97g0cknD7WOlbrhOHS)
