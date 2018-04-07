@@ -11,10 +11,13 @@ At first I collected the data by driving the car on the center of the road witho
 Here is the video obtained by stiching all the images in the training set obtained.
 
 Track1:
-https://youtu.be/bIOxROYhmh0
+
+[![TRACK 1](https://img.youtube.com/vi/bIOxROYhmh0/1.jpg)](https://www.youtube.com/watch?v=bIOxROYhmh0)
 
 Track2:
+
 https://youtu.be/LRuZ5QlC0tk
+[![TRACK 2](https://img.youtube.com/vi/LRuZ5QlC0tk/1.jpg)](https://www.youtube.com/watch?v=LRuZ5QlC0tk)
 
 At first will build a generic model where the output is the steering angle based on the image. I will not be using AWS instance to build and train the model but instead will train it on my GTX 1080 Ti. Will record the amount of time taken to build and train the model.
 
@@ -22,9 +25,7 @@ At first will build a generic model where the output is the steering angle based
 
 This is a simple linear regression model, which outputs the expected measurement for the given image or location on the map.
 
-![alt text][image1]
-
-Click Here for video -- >(https://youtu.be/E5XF0RpSkrI)
+[![IMAGE_VIDEO](https://img.youtube.com/vi/E5XF0RpSkrI/1.jpg)](https://www.youtube.com/watch?v=E5XF0RpSkrI)
 
 It performs very badly as seen in the video. The car veers everywhere
 
@@ -43,9 +44,7 @@ A lambda layer will look something like:
 Lambda(lambda x: (x / 255.0) - 0.5)
 ```
 
-![alt text][image1]
-
-Click Here for video -- >(https://youtu.be/PHPITs18BjM)
+[![IMAGE_VIDEO](https://img.youtube.com/vi/PHPITs18BjM/1.jpg)](https://www.youtube.com/watch?v=PHPITs18BjM)
 
 Well it is still no where close to autonomous driving. Time to try the famous LeNet and see how it performs.
 
@@ -53,9 +52,7 @@ Well it is still no where close to autonomous driving. Time to try the famous Le
 
 In this model we will build a CNN for the images we got. This model follows LeNet architecture.
 
-![alt text][image1]
-
-Click Here for video -- >(https://youtu.be/Zi3V4CIJxEo)
+[![IMAGE_VIDEO](https://img.youtube.com/vi/Zi3V4CIJxEo/1.jpg)](https://www.youtube.com/watch?v=Zi3V4CIJxEo)
 
 Seems better but again it still fails to stay on the road, long way to go to get it perfected.
 
@@ -65,9 +62,7 @@ We going to augment our images by flipping images and steering measurements. A e
 
 Flipped Images
 
-![alt text][image1]
-
-Click Here for video -- >(https://youtu.be/cW4aDtf9W-g)
+[![IMAGE_VIDEO](https://img.youtube.com/vi/cW4aDtf9W-g/1.jpg)](https://www.youtube.com/watch?v=cW4aDtf9W-g)
 
 Seems to drive, but get stuck by the time it reaches the bridge.
 
@@ -79,9 +74,7 @@ We will feed the left and right camera images to your model as if they were comi
 
 During prediction (i.e. "autonomous mode"), we only predict with the center camera image.
 
-![alt text][image1]
-
-Click Here for video -- >(https://youtu.be/YuEtP6lbjP0)
+[![IMAGE_VIDEO](https://img.youtube.com/vi/YuEtP6lbjP0/1.jpg)](https://www.youtube.com/watch?v=YuEtP6lbjP0)
 
 ## MODEL 6
 
@@ -91,18 +84,13 @@ On the first trained model with 5 epochs the car was able to cross over the brid
 
 On retraining with a better data set, that included lot of images where the steer angle would bring it back to center of the road. With this change was able to drive around the circuit without going off the road.
 
-![alt text][image1]
-
-Click Here for video -- >(https://youtu.be/3gFvRcn0bko)
+[![IMAGE_VIDEO](https://img.youtube.com/vi/3gFvRcn0bko/1.jpg)](https://www.youtube.com/watch?v=3gFvRcn0bko)
 
 ## MODEL 7
 
 With the armed insight that a better data with equal negative and positive will help produce a better model, I first focused on getting a new data set with images from the second track. 
 Also went ahead and used the nvida model and some slight modification of adding a dropoff resulted in a model which now can steer the car even when it veers off road. I am quite satisfied with the modle and a great learning on the effect of the right quality of data to build a model.
 
-![alt text][image1]
-
-Click Here for video -- >(https://youtu.be/_tywEv0Vhno)
-
+[![IMAGE_VIDEO](https://img.youtube.com/vi/_tywEv0Vhno/1.jpg)](https://www.youtube.com/watch?v=_tywEv0Vhno)
 
 All intermediate models fom 1 to 6 can be downloaded here -->> https://drive.google.com/open?id=1idwEgE6L2gjdWh97g0cknD7WOlbrhOHS
